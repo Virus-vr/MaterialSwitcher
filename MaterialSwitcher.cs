@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 
+#if UNITY_EDITOR
 public class MaterialSwitcher : EditorWindow
 {
     private string gameFolder;
@@ -12,7 +13,7 @@ public class MaterialSwitcher : EditorWindow
     private const string BakeFolderKey = "MaterialSwitcher_BakeFolder";
     private const string IntermediateFolderKey = "MaterialSwitcher_IntermediateFolder";
 
-    [MenuItem("Virus/Material Switcher")]
+    [MenuItem("Tools/Material Switcher")]
     static void ShowMaterialSwitcherWindow()
     {
         GetWindow<MaterialSwitcher>("Material Switcher");
@@ -122,3 +123,4 @@ public class MaterialSwitcher : EditorWindow
         }
     }
 }
+#endif
